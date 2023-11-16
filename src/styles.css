@@ -1,0 +1,10 @@
+:root {
+        --primary-very-dark-blue: hsl(233, 47%, 7%);
+        --primary-dark-desaturated-blue: hwb(244 10% 78%);
+        --primary-soft-violet: hsl(277, 64%, 61%);
+        
+        --neutral-white: hsl(0, 0%, 100%);
+        --neutral-slightly-transparent-white-75: hsla(0, 0%, 100%, 0.75);
+        --neutral-slightly-transparent-white-60: hsla(0, 0%, 100%, 0.6);
+      }
+
