@@ -74,3 +74,32 @@ But overall, the important thing for @CiMoran to know is you won't need aria-lab
 ### Also consider using aria-label/aria-labelledby for landmarks, fieldset or items with a group role too.
 
 ### We won't often use aria-label at all.
+
+---
+
+Grace Snow: Don't worry about this when you haven't got the design files. Getting it close enough is fine.
+With line breaks they should happen naturally based off the max width on the component (well, the space within it)
+That max width should be in rem not px as you have currently.
+And the h1 should not have margin top. Use padding on main text div instead of margin top on its first child.
+
+Remove the pseudo. That's not how this image effect is meant to be done. Instead make that half of the component have the violet background colour; then use mix-blend-mode multiply and opacity 0.7 on the img
+
+---
+
+Other important bits of feedback
+avoid using such complex css selectors. They are a nightmare to read, nightmare to maintain and can cause cascade/specificity issues later on bigger projects. Instead, place classes on what you want to style so you can use single class selectors in css
+you don't need to set border radius on the children elements. Place it once on the component along with overflow hidden to crop out the corners of the children that are overflowing it. Much simpler!
+
+### Always use REM for scalable components instead of PX.
+
+### If you want to reach for a certain image effect you can use the `mix-blend-mode` with an overlay element above the image.
+
+### Avoid complex CSS selectors.
+
+### Don't set border radius on children. Do it on the component with overflow hidden to crop the corners. It's a lot more simpler.
+
+#####NOTES#####
+
+In this project, I firstly made the overlay with a pseudo element and re-positioned it above the main image, but I couldn't reach the color goal, which had some kind of darker background.
+Apparently, to adapt the image effect a different overlay had to be done. Built a div below the image, then gave it the properties to place it above the image and then for the overlay-effect
+The property mix-blend-mode: multiply; worked very well.
